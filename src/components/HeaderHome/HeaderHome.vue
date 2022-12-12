@@ -11,6 +11,12 @@
   </header>
 </template>
 
+<script>
+export default {
+  name: "HeaderHome",
+};
+</script>
+
 <style lang="scss">
 header {
   nav {
