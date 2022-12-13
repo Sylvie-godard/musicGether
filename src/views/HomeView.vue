@@ -2,9 +2,10 @@
 import HeaderHome from "@/components/HeaderHome/HeaderHome.vue";
 import SearchBar from "@/components/SearchBar/SearchBar.vue";
 import SliderHomePage from "@/components/SliderHomePage/SliderHomePage.vue";
+import NextFriends from "@/components/NextFriends/NextFriends.vue";
 
 export default {
-  components: { SliderHomePage, SearchBar, HeaderHome },
+  components: { NextFriends, SliderHomePage, SearchBar, HeaderHome },
 };
 </script>
 
@@ -13,7 +14,10 @@ export default {
     <HeaderHome />
     <SearchBar />
     <SliderHomePage />
+    <NextFriends />
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>

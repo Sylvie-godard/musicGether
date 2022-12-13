@@ -80,7 +80,7 @@ export default {
 #slider {
   width: 100%;
   display: flex;
-  height: 20rem;
+  height: 40rem;
   margin: auto;
   overflow: hidden;
   scroll-behavior: smooth;
@@ -91,18 +91,25 @@ export default {
     flex: 1 0 100%;
   }
   .slide:nth-child(1) {
-    background-color: pink;
+    background-image: url("../../assets/artists/Mura-Masa-.jpg");
+    background-size: cover;
     height: 100%;
     padding: 2rem;
   }
 
   .slide:nth-child(2) {
+    background-image: url("../../assets/artists/deluxe.jpg");
+    background-size: cover;
+    background-position: center;
     background-color: #804852;
     height: 100%;
     padding: 2rem;
   }
 
   .slide:nth-child(3) {
+    background-image: url("../../assets/artists/jazzy-bazz.jpg");
+    background-size: cover;
+    background-position: center;
     background-color: #503e41;
     height: 100%;
     padding: 2rem;
