@@ -1,7 +1,23 @@
 <script>
-export default {
+import { defineComponent, onMounted, ref } from "vue";
+
+export default defineComponent({
   name: "NextFriends",
-};
+  setup() {
+    const newScroll = ref(0);
+    let count = 1;
+
+    onMounted(() => {
+      const blockNextFriends = document.querySelector(".allImgNextFriends");
+      // setInterval(() => {
+      //   newScroll.value = count;
+      //   console.log({ scroll: newScroll.value });
+      //   blockNextFriends.scrollLeft += newScroll.value;
+      // }, 1000);
+      // count++;
+    });
+  },
+});
 </script>
 
 <template>
@@ -13,13 +29,33 @@ export default {
         src="../../assets/users/Christelle.png"
         alt="Christelle.png"
       />
-      <img class="roundImg" src="../../assets/users/Célia.png" alt="Célia.png" />
+      <img
+        class="roundImg"
+        src="../../assets/users/Célia.png"
+        alt="Célia.png"
+      />
       <img class="roundImg" src="../../assets/users/Mina.png" alt="Mina.png" />
-      <img class="roundImg" src="../../assets/users/Kevin.png" alt="Kevin.png" />
-      <img class="roundImg" src="../../assets/users/Koisso.png" alt="Koisso.png" />
+      <img
+        class="roundImg"
+        src="../../assets/users/Kevin.png"
+        alt="Kevin.png"
+      />
+      <img
+        class="roundImg"
+        src="../../assets/users/Koisso.png"
+        alt="Koisso.png"
+      />
       <img class="roundImg" src="../../assets/users/Izzy.png" alt="Izzy.png" />
-      <img class="roundImg" src="../../assets/users/Nicolas.png" alt="Izzy.png" />
-      <img class="roundImg" src="../../assets/users/Valentin.png" alt="Izzy.png" />
+      <img
+        class="roundImg"
+        src="../../assets/users/Nicolas.png"
+        alt="Izzy.png"
+      />
+      <img
+        class="roundImg"
+        src="../../assets/users/Valentin.png"
+        alt="Izzy.png"
+      />
     </div>
   </div>
 </template>

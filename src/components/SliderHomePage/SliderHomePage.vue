@@ -1,5 +1,7 @@
 <script>
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "SliderHomePage",
   setup() {
     const errorGap = 2;
@@ -33,7 +35,7 @@ export default {
       previous,
     };
   },
-};
+});
 </script>
 
 <template>

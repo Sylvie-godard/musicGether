@@ -1,3 +1,11 @@
+<script>
+import {defineComponent} from "vue";
+
+export default defineComponent({
+  name: "HeaderHome",
+});
+</script>
+
 <template>
   <header>
     <nav>
@@ -10,12 +18,6 @@
     </nav>
   </header>
 </template>
-
-<script>
-export default {
-  name: "HeaderHome",
-};
-</script>
 
 <style lang="scss">
 header {
