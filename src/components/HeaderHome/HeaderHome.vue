@@ -1,8 +1,10 @@
 <script>
-import {defineComponent} from "vue";
+import { defineComponent } from "vue";
+import { RouterLink } from "vue-router";
 
 export default defineComponent({
   name: "HeaderHome",
+  components: { RouterLink },
 });
 </script>
 
@@ -10,10 +12,10 @@ export default defineComponent({
   <header>
     <nav>
       <ul>
-        <li>Accueil</li>
-        <li>Concerts</li>
-        <li>Festivals</li>
-        <li>Contact</li>
+        <li><RouterLink to="/">Accueil</RouterLink></li>
+        <li><RouterLink to="/concerts">Concerts</RouterLink></li>
+        <li><RouterLink to="/">Festivals</RouterLink></li>
+        <li><RouterLink to="/">Contact</RouterLink></li>
       </ul>
     </nav>
   </header>
@@ -33,15 +35,16 @@ header {
     justify-content: center;
     list-style: none;
     padding: 2rem;
-    li {
-      color: white;
+
+    a {
       cursor: pointer;
+      transition: 0.3s;
+      color: white;
       font-size: 20px;
       font-weight: bold;
-      transition: 0.3s;
+      text-decoration: none;
     }
-
-    li:hover {
+    a:hover {
       color: lightblue;
     }
     li:not(:last-child):after {
