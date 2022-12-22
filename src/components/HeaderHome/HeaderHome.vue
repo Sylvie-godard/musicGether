@@ -15,7 +15,7 @@ export default defineComponent({
         <li><RouterLink to="/">Accueil</RouterLink></li>
         <li><RouterLink to="/concerts">Concerts</RouterLink></li>
         <li><RouterLink to="/festivals">Festivals</RouterLink></li>
-        <li><RouterLink to="/">Contact</RouterLink></li>
+        <li><RouterLink to="/contact">Contact</RouterLink></li>
       </ul>
     </nav>
   </header>

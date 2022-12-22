@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import AllConcerts from "@/views/AllConcerts.vue";
 import AllFestivals from "@/views/AllFestivals.vue";
+import Contact from "@/views/ContactApp.vue";
 import HeaderHome from "@/components/HeaderHome/HeaderHome.vue";
 import FooterApp from "@/components/FooterApp/FooterApp.vue";
 
@@ -31,6 +32,15 @@ const router = createRouter({
       name: "festivals",
       components: {
         default: AllFestivals,
+        nav: HeaderHome,
+        footer: FooterApp,
+      },
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      components: {
+        default: Contact,
         nav: HeaderHome,
         footer: FooterApp,
       },
