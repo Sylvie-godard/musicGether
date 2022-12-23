@@ -11,11 +11,14 @@ export default defineComponent({
 <template>
   <header>
     <nav>
-      <ul>
+      <ul class="principalMenu">
         <li><RouterLink to="/">Accueil</RouterLink></li>
         <li><RouterLink to="/concerts">Concerts</RouterLink></li>
         <li><RouterLink to="/festivals">Festivals</RouterLink></li>
         <li><RouterLink to="/contact">Contact</RouterLink></li>
+      </ul>
+      <ul class="leftSide">
+        <li><RouterLink to="/my-account">Mon compte</RouterLink></li>
       </ul>
     </nav>
   </header>
@@ -29,7 +32,7 @@ header {
     margin-bottom: 2rem;
   }
 
-  ul {
+  ul.principalMenu {
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -51,6 +54,12 @@ header {
       content: "|";
       margin-left: 2rem;
     }
+  }
+
+  ul.leftSide {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
 </style>
