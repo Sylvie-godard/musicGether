@@ -3,11 +3,14 @@ require("@rushstack/eslint-patch/modern-module-resolution");
 
 module.exports = {
   root: true,
+  rules: {
+    "max-len": ["error", { code: 200 }],
+    "quotes": ["error", "single"]
+  },
   extends: [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier",
   ],
   overrides: [
     {
