@@ -4,14 +4,27 @@ import { defineComponent, ref } from 'vue';
 export default defineComponent({
   name: 'MyWishes',
   setup() {
-    const allWishes = ref(['coco'])
+    const getWishesFromLocal = () => {
+      return JSON.parse(localStorage.getItem('MyWishes'));
+    }
+    const allWishes = localStorage.getItem('MyWishes') ? ref(getWishesFromLocal()) : ref([])
     const wish = ref('')
     const handleInput = (event) => {
       allWishes.value.push(event.target.value)
     }
 
+    const getOldWishes = () => {
+      const storedValue = localStorage.getItem('MyWishes');
+      if (storedValue) {
+        return [...getWishesFromLocal()];
+      }
+      return [];
+    }
+
     const handleSubmit = () => {
-      allWishes.value.push(wish.value)
+      const oldWishes = getOldWishes();
+      allWishes.value.push(wish.value);
+      localStorage.setItem('MyWishes', JSON.stringify([wish.value, ...oldWishes]));
     }
     return {
       allWishes,
